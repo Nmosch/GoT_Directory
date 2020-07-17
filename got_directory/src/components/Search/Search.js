@@ -1,43 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
+import {Form, Col} from 'react-bootstrap';
 
-class Search extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            img: "",
-            name: "",
-            house: "",
-            id: "",
-            nickname: ""
-        }
-    };
-
-    
-
-    render() {
-        return (
-            <Form>
-                <Form.Row className="align-items-center">
-                    <Col xs="auto">
-                        <Form.Label htmlFor="inlineFormInput" srOnly>
-                            Search by house:
-                        </Form.Label>
-                        <Form.Control
-                            className="mb-2"
-                            id="inlineFormInput"
-                            placeholder="Stark"
-                        />
-                    </Col>
-                    <Col xs="auto">
-                        <Button type="submit" className="mb-2">
-                            Submit
-                        </Button>
-                    </Col>
-                </Form.Row>
-            </Form>
-        )
-    }
+const Search = ({ search, handleInputChange }) =>{
+    return (
+        <Form>
+            <Form.Row className="align-items-center">
+                <Col xs="auto">
+                    <Form.Label htmlFor="inlineFormInput" srOnly>
+                    </Form.Label>
+                    <Form.Control
+                        className="mb-2"
+                        id="inlineFormInput"
+                        placeholder="Search by house"
+                        name="search"
+                        value={search}
+                        onChange={handleInputChange}
+                    />
+                </Col>
+            </Form.Row>
+        </Form>
+    )
 }
 
 export default Search;
