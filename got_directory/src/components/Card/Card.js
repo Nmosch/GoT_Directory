@@ -1,38 +1,37 @@
 import React from "react";
+import { Col, Row, Container, Image } from 'react-bootstrap';
 import "./style.css";
 
 const Card = ({ results }) => {
-    return(
+    return (
         <>
-        {results.map(character=>{
-            return (
-                <div className="card" key={character.id}>
-                <div className="img-container">
-                  <img
-                    alt={character.name}
-                    src={character.image}
-                    width="200" 
-                    height="150"
-                  />
-                </div>
-                <div className="content">
-                  <ul>
-                    <li>
-                      <strong>Name:</strong> {character.name}
-                    </li>
-                    <li>
-                      <strong>House:</strong> {character.house}
-                    </li>
-                    <li>
-                      <strong>Nickname:</strong> {character.nickname}
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            )
-        })
-        }
-      </>
+            <Container>
+                {results.map(character => {
+                    return (
+                        <Row className="charRow">
+                            <Col xs={3} >
+                                <Image thumbnail
+                                    alt={character.name}
+                                    src={character.image}
+                                    width="200"
+                                    height="150">
+                                </Image>
+                            </Col >
+                            <Col xs={3} >
+                                <h2>{character.name}</h2>
+                            </Col>
+                            <Col xs={3}>
+                                <h2>{character.house}</h2>
+                            </Col>
+                            <Col xs={3}>
+                                <h2>{character.nickname}</h2>
+                            </Col>
+                        </Row>
+
+                    )
+                })}
+            </Container>
+        </>
     );
 };
 

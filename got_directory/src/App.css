@@ -1,5 +1,11 @@
 .body {
-    /* background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpaperup.com%2F203145%2FGame_of_Thrones_swords.html&psig=AOvVaw2NAKhXbYuRr3DBOv0OPnqa&ust=1595027324374000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCODZ6oDy0uoCFQAAAAAdAAAAABAb'); */
-    /* background-color: blue; */
-    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpaperup.com%2F203145%2FGame_of_Thrones_swords.html&psig=AOvVaw2NAKhXbYuRr3DBOv0OPnqa&ust=1595027324374000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCODZ6oDy0uoCFQAAAAAdAAAAABAb");
+    background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2013/12/23/203145/3f50339c45ec14d14d9fdac691f1698f.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 0.95;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(128, 126, 126)
 }
